@@ -35,7 +35,7 @@ class FavoriteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
-            with (binding) {
+            with(binding) {
                 val teamFavoriteSportAdapter = TeamFavoriteSportAdapter()
 
                 teamFavoriteSportAdapter.onItemClick = { selectedData ->

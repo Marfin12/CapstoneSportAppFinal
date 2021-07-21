@@ -1,6 +1,6 @@
 <resources>
     <string name="favorite_fragment_label">Favorite Sport</string>
-    <string name="menu_home">Sports</string>
+    <string name="menu_home">Sport</string>
     <string name="subject">Subject</string>
     <string name="your_message">Your Message…</string>
     <string name="submit">Submit</string>
@@ -13,11 +13,10 @@
     <string name="empty_data">The data is empty!</string>
     <string name="error_application_content">Something went wrong!! Please try again later</string>
     <string name="seen">seen</string>
-    <string name="title_favorite">Favorite</string>
     <string name="sport_title">Sport Title</string>
     <string name="error_image_desc">error image shown when error appears</string>
     <string name="home_event_sport">Event Sport</string>
     <string name="home_team_sport">Team Vs Team</string>
-    <string name="menu_search_title">Search</string>
+    <string name="menu_search_title">Search Sport</string>
     <string name="map_box_access_token">pk.eyJ1IjoibWFyZmluZmFkaGlsYWgiLCJhIjoiY2tyN3pjMXNpMHN5bTJxbHBtMnIzZXA0dCJ9.sOzcHjtKIFYH_U6Bc5zlOA</string>
 </resources>

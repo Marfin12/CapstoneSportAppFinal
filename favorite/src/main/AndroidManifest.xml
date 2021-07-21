@@ -3,7 +3,7 @@
 
     <dist:module
         dist:instant="false"
-        dist:title="@string/title_favorite">
+        dist:title="@string/menu_favorite">
         <dist:delivery>
             <dist:install-time />
         </dist:delivery>

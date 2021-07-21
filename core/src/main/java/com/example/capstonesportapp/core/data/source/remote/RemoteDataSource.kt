@@ -83,7 +83,14 @@ class RemoteDataSource(private val sportApiService: SportApiService) {
             try {
                 val responses = sportApiService.searchTeam(teamSearch)
                 val dataArray = responses.team
-                val teamResult = dataArray.filter { !localTeamName.contains(it.name) }
+                val teamList = ArrayList<TeamResponse>()
+                if (dataArray != null) {
+                    dataArray.filter { it.description == null }.map {
+                        it.description = "Description is not available yet!"
+                    }
+                    teamList.addAll(dataArray)
+                }
+                val teamResult = teamList.filter { !localTeamName.contains(it.name) }
                 if (teamResult.isNotEmpty()) {
                     emit(ApiResponse.Success(teamResult))
                 } else {
