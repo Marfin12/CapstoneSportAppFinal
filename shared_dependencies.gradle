@@ -1,0 +1,24 @@
+dependencies {
+    implementation "androidx.appcompat:appcompat:$app_compat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+    implementation "androidx.legacy:legacy-support-v4:$legacy_version"
+
+    androidTestImplementation "androidx.test.ext:junit:$test_ext_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$expresso_version"
+    testImplementation "junit:junit:$test_junit_version"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
+
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    implementation "com.google.android.material:material:$material_version"
+
+    implementation "org.koin:koin-core:$koin_version"
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-android-viewmodel:$koin_version"
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+    implementation "com.airbnb.android:lottie:$lottie_version"
+    implementation "com.facebook.shimmer:shimmer:$shimmer_version"
+}

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="PrivateResource">
+
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/light_red_bg"
+        android:contentDescription="@string/blue_background"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/menu_favorite"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFavoriteCount"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="@string/total_default"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/txtFavorite"
+        app:layout_constraintTop_toTopOf="@+id/txtFavorite" />
+
+    <TextView
+        android:id="@+id/txtDetailSeen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/detail_seen"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/txtFavorite"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDetailSeenCount"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="@string/total_default"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/txtDetailSeen"
+        app:layout_constraintTop_toTopOf="@+id/txtDetailSeen" />
+
+    <TextView
+        android:id="@+id/txtTotalSports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/total_sports"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/txtDetailSeen"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTotalSportsCount"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:text="@string/total_default"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/txtTotalSports"
+        app:layout_constraintTop_toTopOf="@+id/txtTotalSports" />
+
+    <FrameLayout
+        android:id="@+id/headerFrameViewEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBackground"
+        tools:context=".home.HomeFragment">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/headerProgressSportBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shimmer_auto_start="true">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <include layout="@layout/country_list_placeholder" />
+                    <include layout="@layout/country_list_placeholder" />
+                    <include layout="@layout/country_list_placeholder" />
+                    <include layout="@layout/country_list_placeholder" />
+                </LinearLayout>
+            </ScrollView>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/headerRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameViewSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".home.HomeFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/autoCompleteSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

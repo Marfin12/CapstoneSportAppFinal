@@ -1,0 +1,20 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:titleTextStyle">@color/design_default_color_on_primary</item>
+    </style>
+
+    <!-- Detail application theme. -->
+    <style name="DetailTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:titleTextStyle">@color/design_default_color_on_primary</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+</resources>
